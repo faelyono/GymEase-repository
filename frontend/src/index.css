@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-950: #03045E;
+  --color-ocean-900: #023E8A;
+  --color-ocean-700: #0077B6;
+  --color-ocean-600: #0096C7;
+  --color-ocean-500: #00B4D8;
+  --color-ocean-400: #48CAE4;
+  --color-ocean-300: #90E0EF;
+  --color-ocean-200: #ADE8F4;
+  --color-ocean-100: #CAF0F8;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #03045E;
+  color: #CAF0F8;
+  min-height: 100vh;
+}
