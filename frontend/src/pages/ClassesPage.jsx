@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { CalendarDays, Plus, X, Search, Pencil, Trash2, Clock, Users, BarChart3, Eye, Loader2 } from 'lucide-react';
 
-const API_CLASSES = 'http://localhost:3000/api/classes';
-const API_TRAINERS = 'http://localhost:3000/api/trainers';
-const API_BOOKINGS = 'http://localhost:3000/api/bookings';
-const API_ATTENDANCE = 'http://localhost:3000/api/attendance';
-const API_GRAPH = 'http://localhost:3000/api/graph';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_CLASSES = `${BASE}/api/classes`;
+const API_TRAINERS = `${BASE}/api/trainers`;
+const API_BOOKINGS = `${BASE}/api/bookings`;
+const API_ATTENDANCE = `${BASE}/api/attendance`;
+const API_GRAPH = `${BASE}/api/graph`;
 
 export default function ClassesPage() {
   const [classes, setClasses] = useState([]);

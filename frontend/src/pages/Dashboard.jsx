@@ -12,7 +12,8 @@ const navItems = [
   { label: 'Analytics', icon: BarChart3, color: '#3219AB', path: '/analytics' },
 ];
 
-const API = 'http://localhost:3000/api/auth';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API = `${BASE}/api/auth`;
 
 export default function Dashboard({ onLogin, isLoggedIn, onLogout }) {
   const [showModal, setShowModal] = useState(false);

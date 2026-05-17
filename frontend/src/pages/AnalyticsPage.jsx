@@ -4,10 +4,11 @@ import {
   Network, Sparkles, ChevronRight, Loader2, X, ChevronDown, RefreshCw
 } from 'lucide-react';
 
-const API_GRAPH = 'http://localhost:3000/api/graph';
-const API_BOOKINGS = 'http://localhost:3000/api/bookings';
-const API_CLASSES = 'http://localhost:3000/api/classes';
-const API_TRAINERS = 'http://localhost:3000/api/trainers';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_GRAPH = `${BASE}/api/graph`;
+const API_BOOKINGS = `${BASE}/api/bookings`;
+const API_CLASSES = `${BASE}/api/classes`;
+const API_TRAINERS = `${BASE}/api/trainers`;
 
 // modal component
 function Modal({ open, onClose, icon: Icon, title, subtitle, wide, children }) {

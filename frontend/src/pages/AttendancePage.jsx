@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { CheckCircle, Search, UserCheck, CalendarDays } from 'lucide-react';
 
-const API_ATTENDANCE = 'http://localhost:3000/api/attendance';
-const API_BOOKINGS = 'http://localhost:3000/api/bookings';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_ATTENDANCE = `${BASE}/api/attendance`;
+const API_BOOKINGS = `${BASE}/api/bookings`;
 
 export default function AttendancePage() {
   const [attendance, setAttendance] = useState([]);

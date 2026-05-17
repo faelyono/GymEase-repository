@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Users, Mail, Phone, CreditCard, Calendar, Shield, TrendingUp, Sparkles } from 'lucide-react';
 
-const API = 'http://localhost:3000/api/auth';
-const API_ATTENDANCE = 'http://localhost:3000/api/attendance';
-const API_GRAPH = 'http://localhost:3000/api/graph';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API = `${BASE}/api/auth`;
+const API_ATTENDANCE = `${BASE}/api/attendance`;
+const API_GRAPH = `${BASE}/api/graph`;
 
 export default function MembersPage() {
   const token = localStorage.getItem('gymease_token') || '';

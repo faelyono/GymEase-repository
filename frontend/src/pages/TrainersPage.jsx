@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Dumbbell, Plus, X, Search, Pencil, Trash2, Trophy, Eye, Loader2, Users } from 'lucide-react';
 
-const API = 'http://localhost:3000/api/trainers';
-const API_GRAPH = 'http://localhost:3000/api/graph';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API = `${BASE}/api/trainers`;
+const API_GRAPH = `${BASE}/api/graph`;
 
 export default function TrainersPage() {
   const [trainers, setTrainers] = useState([]);
